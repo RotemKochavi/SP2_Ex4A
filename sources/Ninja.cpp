@@ -3,7 +3,8 @@
 using namespace std;
 using namespace ariel;
 
-Ninja::Ninja(string name, Point location, int health_points, int speed) : Character(name, location, health_points), _speed(speed) {}
+Ninja::Ninja(string name, Point location, int health_points, int speed) : 
+	Character(name, location, health_points), _speed(speed) {}
 
 void Ninja::move(Character *other){
 	return;
@@ -17,8 +18,11 @@ string Ninja::print() const{
 	return "";
 }
 
-YoungNinja::YoungNinja(string name, Point location) : Ninja(name, location, 100, 14) {}
+YoungNinja::YoungNinja(string name, Point location) :
+	Ninja(name, location, 100, 14) {}
 
-TrainedNinja::TrainedNinja(string name, Point location) : Ninja(name, location, 120, 12) {}
+TrainedNinja::TrainedNinja(string name, Point location) :
+	Ninja(name, location, 120, 12) {}
 
-OldNinja::OldNinja(string name, Point location) : Ninja(name, location, 150, 8) {}
+OldNinja::OldNinja(string name, Point location) : 
+	Ninja(name, location, 150, 8) {}
