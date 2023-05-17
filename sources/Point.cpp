@@ -5,7 +5,7 @@ using namespace ariel;
 
 Point::Point() : _x(0.0), _y(0.0) {}
 
-Point::Point(double pt_x, double pt_y) : _x(pt_x), _y(pt_y) {}
+Point::Point(double p_x, double p_y) : _x(p_x), _y(p_y) {}
 
 double Point::getX() const{
     return 0.0;
@@ -20,9 +20,9 @@ double Point::distance(Point other) const{
 }
 
 string Point::print() const{
-	return "";
+	return " ";
 }
 
-const Point &Point::moveTowards(const Point &curr, const Point &other, const double dist){
-	return curr;
+Point Point::moveTowards( Point &curr,  Point &other,  double dist){
+	return Point();
 }

@@ -5,10 +5,9 @@
 
 namespace ariel
 {
-	class Character
+	class Character 
 	{
 		protected:
-			
 			string _name;
 			Point& _location;
 			int _hp;
@@ -17,6 +16,7 @@ namespace ariel
 		public:
 			
 			Character(string name, Point& location, int health_points);
+			
 			bool isAlive() const;
 			double distance(Character *other) const;
 			void hit(int power);
@@ -26,6 +26,6 @@ namespace ariel
 			bool isInTeam() const;
 			void setInTeam(bool inTeam);
 			int getHP() const;
-			virtual string print() const = 0;
+			virtual string print() const;
 	};
 }

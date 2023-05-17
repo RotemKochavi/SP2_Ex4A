@@ -5,10 +5,9 @@
 #include <sstream>
 #include <stdexcept>
 #include <cassert>
+#include <cmath>
 
 #include "sources/Team.hpp"
-#include "sources/Team2.hpp"
-
 
 using namespace std;
 using namespace ariel;
@@ -17,16 +16,15 @@ TEST_CASE("Test 1 :Distance between two points"){
     Point p1(1, 2);
     Point p2(2, 4);
     Point p3(0, 0);
-    Point p4(0, 0);;
+    Point p4(0, 0);
 
     CHECK(p1.distance(p2) == sqrt(5));
     CHECK(p3.distance(p4) == 0);
     CHECK(p4.distance(p3) == 0);
     CHECK(p4.distance(p4) == 0);
-
 }
 
-TEST_CASE("Test 2: Creation charcters - getName FUNC ") {
+TEST_CASE("Test 2: Creation charcters ") {
 	YoungNinja c1("Young Ninja", Point(1, 2));
 	TrainedNinja c2("Trained Ninja", Point(3, 4));
 	OldNinja c3("Old Ninja", Point(5, 6));
@@ -62,7 +60,6 @@ TEST_CASE("Test 2: Creation charcters - getName FUNC ") {
 	CHECK_EQ(c2.isAlive(), true);
 	CHECK_EQ(c3.isAlive(), true);
 	CHECK_EQ(c4.isAlive(), true);
-
 }
 
 TEST_CASE("Test 3 :Check moveTowards func"){
@@ -75,19 +72,3 @@ TEST_CASE("Test 3 :Check moveTowards func"){
     CHECK(expectedDistance <= distance);
 }
 
-TEST_CASE(" Test 4: Ninja do not move when the enemy is far away") {
-
-    Point ninja_location(0, 0);
-    Point enemy_location(15, 15);
-
-    Ninja ninja("Ninja", ninja_location);
-    Character enemy("Enemy", enemy_location);
-
-    double distance_befor_movement = ninja.getLocation().distance(enemy.getLocation());
-
-    ninja.move(&enemy);
-     
-    double distance_after_movement = ninja.getLocation().distance(enemy.getLocation());
-
-    CHECK(distance_after_movement == distance_befor_movement); // Expected: True.
-}

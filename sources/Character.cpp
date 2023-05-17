@@ -40,3 +40,7 @@ void Character::setInTeam(bool in_team){
 int Character::getHP() const{
 	return 0;
 }
+
+string Character::print() const {
+	return " ";
+}

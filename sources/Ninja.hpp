@@ -18,22 +18,22 @@ namespace ariel
 			string print() const override;
 	};
 
-    class YoungNinja : public Ninja{
+    class YoungNinja : public virtual Ninja{
 		
         public:
-			YoungNinja(string name, Point location);
+			 YoungNinja(string name, Point location);
 	};
 
-	class TrainedNinja : public Ninja{
+	class TrainedNinja : public virtual Ninja{
 		
         public:	
-			TrainedNinja(string name, Point location);
+			 TrainedNinja(string name, Point location);
 	};
 
-	class OldNinja : public Ninja{
+	class OldNinja : public virtual Ninja{
 		
         public:	
-			OldNinja(string name, Point location);
+			 OldNinja(string name, Point location);
 	};
 
 }
