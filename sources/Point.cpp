@@ -23,6 +23,6 @@ string Point::print() const{
 	return " ";
 }
 
-Point Point::moveTowards( Point &curr,  Point &other,  double dist){
+Point Point::moveTowards(Point source, Point destination, double distance){
 	return Point();
 }

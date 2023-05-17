@@ -6,22 +6,18 @@ using namespace ariel;
 Cowboy::Cowboy(string name, Point location) : 
 	Character(name, location, 110) {}
 
-void Cowboy::shoot(Character *other)
-{
+void Cowboy::shoot(Character *other){
 	return;
 }
 
-bool Cowboy::hasBullets() const
-{
+bool Cowboy::hasBullets() const{
 	return false;
 }
 
-void Cowboy::reload()
-{
+void Cowboy::reload(){
 	return;
 }
 
-string Cowboy::print() const
-{
+string Cowboy::print() const{
 	return "";
 }

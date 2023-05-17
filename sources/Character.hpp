@@ -24,7 +24,7 @@ namespace ariel
 			const Point& getLocation() const;
 			void setLocation(Point& location);
 			bool isInTeam() const;
-			void setInTeam(bool inTeam);
+			void setInTeam(bool status);
 			int getHP() const;
 			virtual string print() const;
 	};

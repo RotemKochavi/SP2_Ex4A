@@ -8,7 +8,7 @@ namespace ariel
 	{
 		private:
 			
-			int _bullets;
+			int _bulletsAmount;
 
 		public:
 		

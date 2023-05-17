@@ -33,7 +33,7 @@ bool Character::isInTeam() const{
 	return false;
 }
 
-void Character::setInTeam(bool in_team){
+void Character::setInTeam(bool status){
 	return;
 }
 
